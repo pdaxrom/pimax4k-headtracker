@@ -1,0 +1,29 @@
+Pimax 4K startup:
+
+33 get report id 2   ->  7: 03 02 00 00 20 13 e8
+
+35 set report id 2   ->  7: 03 02 00 00 20 13 e8
+
+37 get report id 2   ->  7: 03 02 00 00 20 13 e8
+
+39 get report id 2   ->  7: 03 02 00 00 20 13 e8
+
+41 set report id 2   ->  7: 03 02 00 00 20 13 e8
+
+43 get report id 2   ->  7: 03 02 00 00 20 13 e8
+
+45 get report id 2   ->  7: 03 02 00 00 20 13 e8
+
+47 set report id 2   ->  7: 03 02 00 00 20 01 e8
+
+49 get report id 2   ->  7: 03 02 00 00 20 01 e8
+
+51 set report id 2   ->  7: 03 02 00 00 20 01 e8
+
+53 get report id 2   ->  7: 03 02 00 00 20 01 e8
+
+55 get report id 240 -> 64: 
+
+57 set report id 17  ->  6:    11 00 00 0b 10 27 (activate tracker data)
+
+...data to host (64 bytes)...
