@@ -652,12 +652,19 @@ void HID_Read(HMDHidInfo * info)
 
 	//LOGI("OK2 %d", size);
 
-	DUMP(buffer, size);
+//	DUMP(buffer, size);
 
 #if 1
 	// currently the only message type the hardware supports (I think)
 	if (buffer[0] == RIFT_IRQ_SENSORS || buffer[0] == RIFT_IRQ_SENSORS_DK2) {
-		handle_tracker_sensor_msg(info, buffer, size);
+		unsigned short *datu = (unsigned short *) &buffer[12];
+		short *dats = (short *) &buffer[12];
+
+		// quaternion (unsigned shor[4])
+		LOGI("Q: %d %d %d %d", datu[0], datu[1], datu[2], datu[3]);
+		// euler, acceleration, gyroscope, xxx?
+		LOGI("Q: %d %d %d %d %d %d %d %d %d", dats[4], dats[5], dats[6], datu[7], datu[8], datu[9], datu[10], datu[11], datu[12]);
+//		handle_tracker_sensor_msg(info, buffer, size);
 	} else {
 		LOGE("unknown message type: %u", buffer[0]);
 	}
